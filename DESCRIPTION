@@ -1,0 +1,17 @@
+Package: CLS1D
+Title: Characteristic Length Scales from 1D Spatial Data
+Version: 0.0.0.9000
+Authors@R: c(person("Delphi", "Ward", email = "Delphi.Ward@utas.edu.au", role = c("aut", "cre")), person("Simon", "Wotherspoon", role = "aut"))
+Description: Provides facilities for computing the characteristic length
+   scale of ecological systems from one dimensional spatial data.
+Depends: R (>= 3.4.1)
+Imports:
+        RANN (>= 2.5.1),
+    zoo (>= 1.8.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,25 @@
+##' .. content for \description{} (no empty lines) ..
+##'
+##' .. content for \details{} ..
+##' @title K-Nearest Neighbour Predicition
+##' @param emb an embedding constructed with \code{\link{window50}}.
+##' @param k the number of neighbours
+##' @return
+##' @author
+knn <- function(emb,k=7) {
+  X <- emb[,-ncol(emb),drop=F]
+  y <- emb[,ncol(emb)]
+  ## Find the k+1 nearest neighbours
+  nn <- nn2(as.matrix(X),k=k+1)
+  ## Remove the self neighbour or the last.
+  keep <- nn$nn.idx!=row(nn$nn.idx)
+  keep[rowSums(keep)==k+1,k+1] <- FALSE
+  nn$nn.idx <- t(matrix(t(nn$nn.idx)[t(keep)],k,length(y)))
+  nn$nn.dists <- t(matrix(t(nn$nn.dists)[t(keep)],k,length(y)))
+  ## Construct inverse distance weights
+  w <- 1/pmax(nn$nn.dists,1.0E-12)
+  w <- w/rowSums(w)
+  ## Compute difference in actual and predicted
+  pred <- rowSums(w*matrix(y[nn$nn.idx],nrow(nn$nn.idx),ncol(nn$nn.idx)))
+  list(obs=y,pred=pred)
+}

@@ -20,6 +20,6 @@ transects. Each window overlaps the previous window by lhalf within the same tra
 the windows are in the same position spatially.
 }
 \details{
-Computes averages in sliding windows along transects by taking differences of
+Computes averages in windows along transects by taking differences of
 cumulative sums.
 }

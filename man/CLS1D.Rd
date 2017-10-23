@@ -42,12 +42,12 @@ of each \code{d} dimensional point in the embedding are weighted according to th
 and the trajectory to the \code{d+1} dimension predicted. Difference between the predicted and observed
 trajectory is calculated either as Error X \code{"errX"}  or Prediction r-squared \code{"PRsq"}.
 
-\deqn{error X = \sqrt{\ell}\times \sqrt{E_t\times \bigg[\Big(X_\ell^t - \hat{X_\ell^t})^2]}}
+\deqn{Error X = \sqrt{l}\times \sqrt{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}}
 
-Where \code{\ell} is the window size,  \code{X_\ell^t} is the observed and \code{X_\ell^t} is the predicted
+Where \code{l} is the window size,  \code{X_l^t} is the observed and \code{X_l^t} is the predicted
 density of species X, and \code{E_t} is the expectation of their difference (mean difference).
 
-\deqn{Prediction r^2 = 1 - \frac{E_t\times \bigg[\Big(X_\ell^t - \hat{X_\ell^t})^2]}{Var(X_\ell^t)}}
+\deqn{Prediction  r^2 = 1 - \frac{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}{Var(X_l^t)}}
 
 Note that Error X is the preferred metric for this sliding window approach.
 Choice of Lhalf will be constrained by the length of the transect. For example, if \code{d=3}, Lhalf should be
@@ -67,7 +67,7 @@ plotCLS(x, metric="errX")
 set.seed(2)
 x <- CLS1D(ifelse(bb2010 == "CF", 1, 0), Lhalf=50, d=3, metric="errX", n.samples=20)
 plotCLS(x, metric="errX")
-#The CLS has clearly declined from 60-70cm to around 30-40 cm.
+#The CLS has declined from 60-70cm to around 30-40 cm.
 
 #Now check the Prediction r-squared spectra
 x <- CLS1D(ifelse(bb2007 == "CF", 1, 0), Lhalf=50, d=3, metric="PRSq", n.samples=20)

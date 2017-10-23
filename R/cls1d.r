@@ -65,6 +65,7 @@ window50 <- function(x,lhalf) {
 ##' @param dim The embedding dimension + 1.
 ##' @return An embedding as a matrix.
 ##' @seealso \code{\link{window50}}
+##' @export
 ##' @examples
 ##' x <- seq(1, 100, by=1)
 ##' embed50(x, 5, 4)
@@ -90,12 +91,12 @@ embed50 <- function(x,lhalf,dim) {
 ##' and the trajectory to the \code{d+1} dimension predicted. Difference between the predicted and observed
 ##' trajectory is calculated either as Error X \code{"errX"}  or Prediction r-squared \code{"PRsq"}.
 ##'
-##' \deqn{error X = \sqrt{\ell}\times \sqrt{E_t\times \bigg[\Big(X_\ell^t - \hat{X_\ell^t})^2]}}
+##' \deqn{Error X = \sqrt{l}\times \sqrt{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}}
 ##'
-##' Where \code{\ell} is the window size,  \code{X_\ell^t} is the observed and \code{X_\ell^t} is the predicted
+##' Where \code{l} is the window size,  \code{X_l^t} is the observed and \code{X_l^t} is the predicted
 ##' density of species X, and \code{E_t} is the expectation of their difference (mean difference).
 ##'
-##' \deqn{Prediction r^2 = 1 - \frac{E_t\times \bigg[\Big(X_\ell^t - \hat{X_\ell^t})^2]}{Var(X_\ell^t)}}
+##' \deqn{Prediction  r^2 = 1 - \frac{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}{Var(X_l^t)}}
 ##'
 ##' Note that Error X is the preferred metric for this sliding window approach.
 ##' Choice of Lhalf will be constrained by the length of the transect. For example, if \code{d=3}, Lhalf should be
@@ -128,7 +129,7 @@ embed50 <- function(x,lhalf,dim) {
 ##' set.seed(2)
 ##' x <- CLS1D(ifelse(bb2010 == "CF", 1, 0), Lhalf=50, d=3, metric="errX", n.samples=20)
 ##' plotCLS(x, metric="errX")
-##' #The CLS has clearly declined from 60-70cm to around 30-40 cm.
+##' #The CLS has declined from 60-70cm to around 30-40 cm.
 ##'
 ##' #Now check the Prediction r-squared spectra
 ##' x <- CLS1D(ifelse(bb2007 == "CF", 1, 0), Lhalf=50, d=3, metric="PRSq", n.samples=20)
@@ -173,10 +174,14 @@ CLS1D<- function(x, Lhalf, d, metric=c("PRSq","errX"), n.samples=10, k=7, replac
 ##' weighted according to their inverse distance, and the trajectory to the final dimension (column) predicted.
 ##' Difference between the predicted and observed trajectory is calculated either as Error X \code{"errX"}  or
 ##' Prediction r-squared \code{"PRsq"}.
-##' \deqn{latexascii}{error X = \sqrt{\ell}\times \sqrt{E_t\times \bigg[\Big(X_\ell^t - \hat{X_\ell^t})^2]}}
-##' Where \code{\ell} is the window size,  \code{X_\ell^t} is the observed and \code{X_\ell^t} is the predicted
+##'
+##' \deqn{Error X = \sqrt{l}\times \sqrt{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}}
+##'
+##' Where \code{l} is the window size,  \code{X_l^t} is the observed and \code{X_l^t} is the predicted
 ##' density of species X, and \code{E_t} is the expectation of their difference (mean difference).
-##' \deqn{Prediction r^2 = 1 - \frac{E_t\times \bigg[\Big(X_\ell^t - \hat{X_\ell^t})^2]}{Var(X_\ell^t)}}
+##'
+##' \deqn{Prediction  r^2 = 1 - \frac{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}{Var(X_l^t)}}
+##'
 ##' @title Short time-series prediction error computation
 ##' @param x One-dimensional transect data.
 ##' @param metric Metric to calculate. Options are \code{"errX"} (Error X) or \code{"PRSq"} (prediction r-squared). Error X is the preferred option for this sliding window approach.
@@ -188,7 +193,7 @@ CLS1D<- function(x, Lhalf, d, metric=c("PRSq","errX"), n.samples=10, k=7, replac
 ##' size and each column is a different subsample of the delay embedding.
 ##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
 ##' Detecting ecological regime shifts from transect data.
-##' @seealso \code{\link{window50sts}}
+##' @seealso \code{\link{window50sts}}, \code{\link{knn}}
 ##' @importFrom RANN nn2
 ##' @export
 ##' @examples
@@ -258,7 +263,7 @@ window50sts <- function(x,lhalf) {
 ##' @param metric Optional. Specify metric for y-axis label. Options are \code{"errX"} (Error X) or \code{"PRSq"} (prediction r-squared).
 ##' @param ylim Optional. Specify y-axis range. Default is \code{range(X1)}.
 ##' @param xlab Optional. Specify x-axis label. Default is "Window length".
-##' @param xticks Optional. Specify placement of ticks on x-axis. Default is by 10.
+##' @param xticks Optional. Specify spacing of ticks on x-axis. Default is by 10.
 ##' @return Returns a plot of the prediction error spectra.
 ##' @importFrom graphics axis matlines mtext plot.new plot.window polygon
 ##' @importFrom grDevices adjustcolor

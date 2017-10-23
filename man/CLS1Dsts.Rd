@@ -38,10 +38,13 @@ Then, using the \code{\link{knn}} function the \code{k} nearest neighbours of ea
 weighted according to their inverse distance, and the trajectory to the final dimension (column) predicted.
 Difference between the predicted and observed trajectory is calculated either as Error X \code{"errX"}  or
 Prediction r-squared \code{"PRsq"}.
-\deqn{latexascii}{error X = \sqrt{\ell}\times \sqrt{E_t\times \bigg[\Big(X_\ell^t - \hat{X_\ell^t})^2]}}
-Where \code{\ell} is the window size,  \code{X_\ell^t} is the observed and \code{X_\ell^t} is the predicted
+
+\deqn{Error X = \sqrt{l}\times \sqrt{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}}
+
+Where \code{l} is the window size,  \code{X_l^t} is the observed and \code{X_l^t} is the predicted
 density of species X, and \code{E_t} is the expectation of their difference (mean difference).
-\deqn{Prediction r^2 = 1 - \frac{E_t\times \bigg[\Big(X_\ell^t - \hat{X_\ell^t})^2]}{Var(X_\ell^t)}}
+
+\deqn{Prediction  r^2 = 1 - \frac{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}{Var(X_l^t)}}
 }
 \examples{
 x <- CLS1Dsts(Sp2R1_sts, Lhalf=20, metric="errX", n.samples=20)
@@ -61,5 +64,5 @@ Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
 Detecting ecological regime shifts from transect data.
 }
 \seealso{
-\code{\link{window50sts}}
+\code{\link{window50sts}}, \code{\link{knn}}
 }

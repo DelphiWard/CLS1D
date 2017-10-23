@@ -17,7 +17,7 @@ plotCLS(X1, Lhalf = nrow(X1), metric, ylim, xlab, xticks = 10)
 
 \item{xlab}{Optional. Specify x-axis label. Default is "Window length".}
 
-\item{xticks}{Optional. Specify placement of ticks on x-axis. Default is by 10.}
+\item{xticks}{Optional. Specify spacing of ticks on x-axis. Default is by 10.}
 }
 \value{
 Returns a plot of the prediction error spectra.

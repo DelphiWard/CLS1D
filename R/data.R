@@ -10,7 +10,7 @@
 ##' Detecting ecological regime shifts from transect data.
 ##'
 ##'
-##' @source \url{http://metadata.imas.utas.edu.au/geonetwork/srv/eng/metadata.show?uuid=2b7b9e49-b426-4a50-a24b-d793e4a58e6e}
+##' @source \url{https://doi.org/10.4226/77/587E953EBFDB3}
 "bb2007"
 
 
@@ -26,7 +26,7 @@
 ##' Detecting ecological regime shifts from transect data.
 ##'
 ##'
-##' @source \url{http://metadata.imas.utas.edu.au/geonetwork/srv/eng/metadata.show?uuid=2b7b9e49-b426-4a50-a24b-d793e4a58e6e}
+##' @source \url{https://doi.org/10.4226/77/587E953EBFDB3}
 "bb2010"
 
 

@@ -91,12 +91,12 @@ embed50 <- function(x,lhalf,dim) {
 ##' and the trajectory to the \code{d+1} dimension predicted. Difference between the predicted and observed
 ##' trajectory is calculated either as Error X \code{"errX"}  or Prediction r-squared \code{"PRsq"}.
 ##'
-##' \deqn{Error X = \sqrt{l}\times \sqrt{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}}
+##' \deqn{Error X = \sqrt{l\times E_t\times \bigg[\Big(X_l^t - \hat{X_l^t}\Big)^2\bigg]}}
 ##'
-##' Where \code{l} is the window size,  \code{X_l^t} is the observed and \code{X_l^t} is the predicted
-##' density of species X, and \code{E_t} is the expectation of their difference (mean difference).
+##' Where \eqn{l} is the window size,  \eqn{X_l^t} is the observed and \eqn{X_l^t} is the predicted
+##' density of species \eqn{X}, and \eqn{E_t} is the expectation of their difference (mean difference).
 ##'
-##' \deqn{Prediction  r^2 = 1 - \frac{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}{Var(X_l^t)}}
+##' \deqn{Prediction  r^2 = 1 - \frac{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t}\Big)^2\bigg]}{Var(X_l^t)}}
 ##'
 ##' Note that Error X is the preferred metric for this sliding window approach.
 ##' Choice of Lhalf will be constrained by the length of the transect. For example, if \code{d=3}, Lhalf should be
@@ -109,8 +109,8 @@ embed50 <- function(x,lhalf,dim) {
 ##' @param metric Metric to calculate. Options are \code{"errX"} (Error X) or \code{"PRSq"} (prediction r-squared). Error X is the preferred option for this sliding window approach.
 ##' @param Lhalf The maximum half window size.
 ##' @param d The embedding dimension.
-##' @param n.samples the number of resamples to draw from the embedding. Default is \code{10}.
-##' @param k the number of neighbours to use in prediction. Default is \code{7}.
+##' @param n.samples The number of resamples to draw from the embedding. Default is \code{10}.
+##' @param k The number of neighbours to use in prediction. Default is \code{7}.
 ##' @param replace Sample from the embedding with replacement. Default is \code{TRUE}.
 ##' @return A matrix of Prediction r-squared or Errror X estimates in which each row is a different window
 ##' size and each column is a different subsample of the delay embedding.
@@ -175,19 +175,19 @@ CLS1D<- function(x, Lhalf, d, metric=c("PRSq","errX"), n.samples=10, k=7, replac
 ##' Difference between the predicted and observed trajectory is calculated either as Error X \code{"errX"}  or
 ##' Prediction r-squared \code{"PRsq"}.
 ##'
-##' \deqn{Error X = \sqrt{l}\times \sqrt{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}}
+##' \deqn{Error X = \sqrt{l\times E_t\times \bigg[\Big(X_l^t - \hat{X_l^t}\Big)^2\bigg]}}
 ##'
-##' Where \code{l} is the window size,  \code{X_l^t} is the observed and \code{X_l^t} is the predicted
-##' density of species X, and \code{E_t} is the expectation of their difference (mean difference).
+##' Where \eqn{l} is the window size,  \eqn{X_l^t} is the observed and \eqn{X_l^t} is the predicted
+##' density of species \eqn{X}, and \eqn{E_t} is the expectation of their difference (mean difference).
 ##'
-##' \deqn{Prediction  r^2 = 1 - \frac{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t})^2\bigg]}{Var(X_l^t)}}
+##' \deqn{Prediction  r^2 = 1 - \frac{E_t\times \bigg[\Big(X_l^t - \hat{X_l^t}\Big)^2\bigg]}{Var(X_l^t)}}
 ##'
 ##' @title Short time-series prediction error computation
 ##' @param x One-dimensional transect data.
 ##' @param metric Metric to calculate. Options are \code{"errX"} (Error X) or \code{"PRSq"} (prediction r-squared). Error X is the preferred option for this sliding window approach.
 ##' @param Lhalf The maximum half window size.
-##' @param n.samples the number of resamples to draw from the embedding. Default is \code{10}.
-##' @param k the number of neighbours to use in prediction. Default is \code{7}.
+##' @param n.samples The number of resamples to draw from the embedding. Default is \code{10}.
+##' @param k The number of neighbours to use in prediction. Default is \code{7}.
 ##' @param replace Sample from the embedding with replacement. Default is \code{TRUE}.
 ##' @return A matrix of Prediction r-squared or Errror X estimates in which each row is a different window
 ##' size and each column is a different subsample of the delay embedding.

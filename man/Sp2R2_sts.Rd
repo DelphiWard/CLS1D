@@ -13,7 +13,7 @@ Transect data from three time steps (separated by 10 time steps) of the second r
 This example contains only Species 2 presence-absence data.
 }
 \references{
-Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-Detecting ecological regime shifts from transect data.
+Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+Detecting ecological regime shifts from transect data. Ecological Monographs.
 }
 \keyword{datasets}

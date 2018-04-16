@@ -60,8 +60,8 @@ x <- CLS1Dsts(Sp2R2_sts, Lhalf=20, metric="PRSq", n.samples=20)
 plotCLS(x, metric="PRSq")
 }
 \references{
-Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-Detecting ecological regime shifts from transect data.
+Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+Detecting ecological regime shifts from transect data. Ecological Monographs.
 }
 \seealso{
 \code{\link{window50sts}}, \code{\link{knn}}

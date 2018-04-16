@@ -6,8 +6,8 @@
 ##'
 ##' @references Haapkyla J, Melbourne-Thomas J, Flavell M, Ward D (2016). Hoga coral reef benthic community transect data.
 ##' Centre for Tropical Waters and Aquatic Research, James Cook University. DOI: 10.4226/77/587e953ebfdb3
-##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-##' Detecting ecological regime shifts from transect data.
+##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+##' Detecting ecological regime shifts from transect data. Ecological Monographs.
 ##'
 ##'
 ##' @source \url{https://doi.org/10.4226/77/587E953EBFDB3}
@@ -32,12 +32,12 @@
 
 ##' Simulated spatial model output transect data
 ##'
-##' Transect data from the first regime of Test Case 2 in Ward et al (submitted)
+##' Transect data from the first regime of Test Case 2 in Ward et al (2018)
 ##'
 ##' @format
 ##'
-##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-##' Detecting ecological regime shifts from transect data.
+##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+##' Detecting ecological regime shifts from transect data. Ecological Monographs.
 "regime1_sw"
 
 

@@ -9,10 +9,10 @@
 regime1_sw
 }
 \description{
-Transect data from the first regime of Test Case 2 in Ward et al (submitted)
+Transect data from the first regime of Test Case 2 in Ward et al (2018)
 }
 \references{
-Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-Detecting ecological regime shifts from transect data.
+Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+Detecting ecological regime shifts from transect data. Ecological Monographs.
 }
 \keyword{datasets}

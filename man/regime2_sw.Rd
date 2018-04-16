@@ -12,7 +12,7 @@ regime2_sw
 Transect data from the second regime of Test Case 2 in Ward et al (submitted)
 }
 \references{
-Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-Detecting ecological regime shifts from transect data.
+Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+Detecting ecological regime shifts from transect data. Ecological Monographs.
 }
 \keyword{datasets}

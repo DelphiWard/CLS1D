@@ -74,8 +74,8 @@ x <- CLS1D(ifelse(bb2007 == "CF", 1, 0), Lhalf=50, d=3, metric="PRSq", n.samples
 plotCLS(x, metric="PRSq")
 }
 \references{
-Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-Detecting ecological regime shifts from transect data.
+Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+Detecting ecological regime shifts from transect data. Ecological Monographs.
 }
 \seealso{
 \code{\link{window50}},\code{\link{embed50}}, \code{\link{knn}}

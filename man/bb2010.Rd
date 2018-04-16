@@ -18,7 +18,7 @@ Coral reef benthic community transect data from Blue Bowl Reef, Wakatobi Marine 
 Haapkyla J, Melbourne-Thomas J, Flavell M, Ward D (2016). Hoga coral reef benthic community transect data.
 Centre for Tropical Waters and Aquatic Research, James Cook University. DOI: 10.4226/77/587e953ebfdb3
 
-Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-Detecting ecological regime shifts from transect data.
+Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+Detecting ecological regime shifts from transect data. Ecological Monographs.
 }
 \keyword{datasets}

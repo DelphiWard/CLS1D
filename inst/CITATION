@@ -1,0 +1,22 @@
+citHeader("To cite CLS1D in publications use:")
+
+citEntry(entry = "Manual",
+  title        = "CLS1D: Characteristic Length Scales from 1D Spatial Data",
+  author       = personList(as.person("Delphi Ward"),
+                   as.person("Simon Wotherspoon")),
+  year         = "2018",
+  note         = "R package version 1.0.0",
+  doi          = "http://doi.org/10.5281/zenodo.1218773",
+
+  textVersion  =
+  paste("Delphi Ward, Simon Wotherspoon (2018).",
+        "CLS1D: Characteristic Length Scales from 1D Spatial Data.",
+        "http://doi.org/10.5281/zenodo.1218773.")
+)
+
+
+
+citFooter("Development and testing of this package is published in:
+
+Ward, Wotherspoon, Melbourne-Thomas, Haapkyla and Johnson (2018). Detecting ecological regime shifts from transect data. Ecological Monographs.
+")

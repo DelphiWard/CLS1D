@@ -21,5 +21,12 @@ install.packages("devtools")
 (CLS1D otherwise does not need devtools for normal use.)
 
 
+To cite this package
+
+```R
+citation(package="CLS1D")
+```
+
+
 ## TODO
 

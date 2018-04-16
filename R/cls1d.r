@@ -114,8 +114,8 @@ embed50 <- function(x,lhalf,dim) {
 ##' @param replace Sample from the embedding with replacement. Default is \code{TRUE}.
 ##' @return A matrix of Prediction r-squared or Errror X estimates in which each row is a different window
 ##' size and each column is a different subsample of the delay embedding.
-##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-##' Detecting ecological regime shifts from transect data.
+##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+##' Detecting ecological regime shifts from transect data. Ecological Monographs.
 ##' @seealso \code{\link{window50}},\code{\link{embed50}}, \code{\link{knn}}
 ##' @export
 ##' @examples
@@ -191,8 +191,8 @@ CLS1D<- function(x, Lhalf, d, metric=c("PRSq","errX"), n.samples=10, k=7, replac
 ##' @param replace Sample from the embedding with replacement. Default is \code{TRUE}.
 ##' @return A matrix of Prediction r-squared or Errror X estimates in which each row is a different window
 ##' size and each column is a different subsample of the delay embedding.
-##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (submitted).
-##' Detecting ecological regime shifts from transect data.
+##' @references Ward D, Wotherspoon S, Melbourne-Thomas J, Haapkyla J, Johnson CR (2018).
+##' Detecting ecological regime shifts from transect data. Ecological Monographs.
 ##' @seealso \code{\link{window50sts}}, \code{\link{knn}}
 ##' @importFrom RANN nn2
 ##' @export

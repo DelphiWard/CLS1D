@@ -1,6 +1,6 @@
 Package: CLS1D
 Title: Characteristic Length Scales from 1D Spatial Data
-Version: 0.0.0.9000
+Version: 0.1.0.0000
 Authors@R: c(person("Delphi", "Ward", email = "Delphi.Ward@utas.edu.au", role = c("aut", "cre")), person("Simon", "Wotherspoon", role = "aut"))
 Description: Provides facilities for computing the characteristic length
    scale of ecological systems from one dimensional spatial data.
